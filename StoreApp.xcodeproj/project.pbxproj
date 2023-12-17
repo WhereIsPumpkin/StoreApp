@@ -14,6 +14,7 @@
 		75E2E60E2B2F325800F92BE6 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E60D2B2F325800F92BE6 /* CategoriesView.swift */; };
 		75E2E6112B2F40CE00F92BE6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6102B2F40CE00F92BE6 /* HeaderView.swift */; };
 		75E2E6132B2F410700F92BE6 /* CardBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6122B2F410700F92BE6 /* CardBalanceView.swift */; };
+		75E2E6152B2F431100F92BE6 /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6142B2F431100F92BE6 /* CategoryCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		75E2E60D2B2F325800F92BE6 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		75E2E6102B2F40CE00F92BE6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		75E2E6122B2F410700F92BE6 /* CardBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBalanceView.swift; sourceTree = "<group>"; };
+		75E2E6142B2F431100F92BE6 /* CategoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				75E2E6102B2F40CE00F92BE6 /* HeaderView.swift */,
 				75E2E6122B2F410700F92BE6 /* CardBalanceView.swift */,
+				75E2E6142B2F431100F92BE6 /* CategoryCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				75E2E60B2B2F323500F92BE6 /* MainView.swift in Sources */,
 				75E2E5F82B2F2FAC00F92BE6 /* StoreApp.swift in Sources */,
 				75E2E6112B2F40CE00F92BE6 /* HeaderView.swift in Sources */,
+				75E2E6152B2F431100F92BE6 /* CategoryCardView.swift in Sources */,
 				75E2E6132B2F410700F92BE6 /* CardBalanceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

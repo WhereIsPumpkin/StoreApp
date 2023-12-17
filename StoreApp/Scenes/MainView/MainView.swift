@@ -13,7 +13,14 @@ struct MainView: View {
             HeaderView()
             CardBalanceView()
             ScrollView(.horizontal, showsIndicators: false) {
-                
+                HStack{
+                    CategoryCardView()
+                    CategoryCardView()
+                    CategoryCardView()
+                    CategoryCardView()
+                    CategoryCardView()
+                    CategoryCardView()
+                }
             }
             Spacer()
         }
