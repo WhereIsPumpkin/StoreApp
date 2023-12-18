@@ -21,7 +21,7 @@ struct CardBalanceView: View {
 
 struct CardBackgroundView: View {
     var body: some View {
-        Color("CardColor")
+        Color(.black)
     }
 }
 
@@ -32,7 +32,7 @@ struct CardContentView: View {
             Spacer()
             BalanceAmountView()
             Spacer()
-            CardInfoView()
+            TotalSpentView()
             Spacer()
         }
         .padding()
@@ -47,32 +47,48 @@ struct BalanceHeaderView: View {
 }
 
 struct BalanceAmountView: View {
+    @EnvironmentObject var viewModel: MainViewModel
+
     var body: some View {
-        Text("$ 625.00")
+        Text(String(format: "$ %.2f", viewModel.balance))
             .font(.system(size: 35, weight: .semibold))
+            .foregroundColor(viewModel.error != nil ? .red : .white)
     }
 }
 
-struct CardInfoView: View {
-    var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text("Card")
-                .font(.system(size: 17))
-            CardDetailView()
-        }
-    }
-}
-
-struct CardDetailView: View {
+struct TotalSpentView: View {
+    @EnvironmentObject var viewModel: MainViewModel
+    
     var body: some View {
         HStack {
-            CardImageView()
-            CardOwnerView()
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Total Spent:")
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundColor(.black)
+                
+                Text(String(format: "$ %.2f", viewModel.totalSpent))
+                    .font(.system(size: 22, weight: .bold))
+                    .foregroundColor(.black)
+            }
+            
             Spacer()
-            ChangeCardButton()
+
+            Button(action: {
+                viewModel.checkout()
+            }) {
+                Text("Check Out")
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(height: 40)
+                    .background(viewModel.cartItems.isEmpty ? Color.gray : Color.black)
+                    .cornerRadius(10)
+            }
+            .disabled(viewModel.cartItems.isEmpty)
         }
-        .background(Color("Background"))
-        .clipShape(RoundedRectangle(cornerRadius: 5))
+        .padding()
+        .background(Color(red: 250/255, green: 246/255, blue: 240/255))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
@@ -103,10 +119,10 @@ struct ChangeCardButton: View {
         Text("Change")
             .font(.system(size: 16))
             .foregroundStyle(Color("CardColor"))
-            .padding()
     }
 }
 
 #Preview {
     CardBalanceView()
+        .environmentObject(MainViewModel())
 }

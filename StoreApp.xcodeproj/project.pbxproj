@@ -11,10 +11,14 @@
 		75E2E5FC2B2F2FAD00F92BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E2E5FB2B2F2FAD00F92BE6 /* Assets.xcassets */; };
 		75E2E5FF2B2F2FAD00F92BE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E2E5FE2B2F2FAD00F92BE6 /* Preview Assets.xcassets */; };
 		75E2E60B2B2F323500F92BE6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E60A2B2F323500F92BE6 /* MainView.swift */; };
-		75E2E60E2B2F325800F92BE6 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E60D2B2F325800F92BE6 /* CategoriesView.swift */; };
 		75E2E6112B2F40CE00F92BE6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6102B2F40CE00F92BE6 /* HeaderView.swift */; };
 		75E2E6132B2F410700F92BE6 /* CardBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6122B2F410700F92BE6 /* CardBalanceView.swift */; };
 		75E2E6152B2F431100F92BE6 /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6142B2F431100F92BE6 /* CategoryCardView.swift */; };
+		75E2E6172B2F63BE00F92BE6 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6162B2F63BE00F92BE6 /* ProductCardView.swift */; };
+		75E2E6192B2F841400F92BE6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6182B2F841400F92BE6 /* MainViewModel.swift */; };
+		75E2E61D2B2F8AF300F92BE6 /* NetSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 75E2E61C2B2F8AF300F92BE6 /* NetSwift */; };
+		75E2E61F2B2F8C8800F92BE6 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E61E2B2F8C8800F92BE6 /* ProductModel.swift */; };
+		75E2E6242B2FC75500F92BE6 /* DetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2E6232B2FC75500F92BE6 /* DetailPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +27,13 @@
 		75E2E5FB2B2F2FAD00F92BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75E2E5FE2B2F2FAD00F92BE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75E2E60A2B2F323500F92BE6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		75E2E60D2B2F325800F92BE6 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		75E2E6102B2F40CE00F92BE6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		75E2E6122B2F410700F92BE6 /* CardBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBalanceView.swift; sourceTree = "<group>"; };
 		75E2E6142B2F431100F92BE6 /* CategoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
+		75E2E6162B2F63BE00F92BE6 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		75E2E6182B2F841400F92BE6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		75E2E61E2B2F8C8800F92BE6 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		75E2E6232B2FC75500F92BE6 /* DetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E2E61D2B2F8AF300F92BE6 /* NetSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,7 @@
 				75E2E6052B2F304000F92BE6 /* App */,
 				75E2E6062B2F317C00F92BE6 /* Scenes */,
 				75E2E60F2B2F40B200F92BE6 /* Components */,
+				75E2E61A2B2F842200F92BE6 /* Model */,
 				75E2E5FB2B2F2FAD00F92BE6 /* Assets.xcassets */,
 				75E2E5FD2B2F2FAD00F92BE6 /* Preview Content */,
 			);
@@ -87,8 +96,8 @@
 		75E2E6062B2F317C00F92BE6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				75E2E6222B2FC74A00F92BE6 /* DetailPage */,
 				75E2E6072B2F31DA00F92BE6 /* MainView */,
-				75E2E60C2B2F324700F92BE6 /* CategoriesView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -97,16 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				75E2E60A2B2F323500F92BE6 /* MainView.swift */,
+				75E2E6182B2F841400F92BE6 /* MainViewModel.swift */,
 			);
 			path = MainView;
-			sourceTree = "<group>";
-		};
-		75E2E60C2B2F324700F92BE6 /* CategoriesView */ = {
-			isa = PBXGroup;
-			children = (
-				75E2E60D2B2F325800F92BE6 /* CategoriesView.swift */,
-			);
-			path = CategoriesView;
 			sourceTree = "<group>";
 		};
 		75E2E60F2B2F40B200F92BE6 /* Components */ = {
@@ -115,8 +117,25 @@
 				75E2E6102B2F40CE00F92BE6 /* HeaderView.swift */,
 				75E2E6122B2F410700F92BE6 /* CardBalanceView.swift */,
 				75E2E6142B2F431100F92BE6 /* CategoryCardView.swift */,
+				75E2E6162B2F63BE00F92BE6 /* ProductCardView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		75E2E61A2B2F842200F92BE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75E2E61E2B2F8C8800F92BE6 /* ProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75E2E6222B2FC74A00F92BE6 /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				75E2E6232B2FC75500F92BE6 /* DetailPageView.swift */,
+			);
+			path = DetailPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,9 @@
 			dependencies = (
 			);
 			name = StoreApp;
+			packageProductDependencies = (
+				75E2E61C2B2F8AF300F92BE6 /* NetSwift */,
+			);
 			productName = StoreApp;
 			productReference = 75E2E5F42B2F2FAC00F92BE6 /* StoreApp.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +185,9 @@
 				Base,
 			);
 			mainGroup = 75E2E5EB2B2F2FAC00F92BE6;
+			packageReferences = (
+				75E2E61B2B2F8AF300F92BE6 /* XCRemoteSwiftPackageReference "SwiftNet" */,
+			);
 			productRefGroup = 75E2E5F52B2F2FAC00F92BE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,12 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E2E60E2B2F325800F92BE6 /* CategoriesView.swift in Sources */,
+				75E2E6192B2F841400F92BE6 /* MainViewModel.swift in Sources */,
+				75E2E6172B2F63BE00F92BE6 /* ProductCardView.swift in Sources */,
 				75E2E60B2B2F323500F92BE6 /* MainView.swift in Sources */,
+				75E2E6242B2FC75500F92BE6 /* DetailPageView.swift in Sources */,
 				75E2E5F82B2F2FAC00F92BE6 /* StoreApp.swift in Sources */,
 				75E2E6112B2F40CE00F92BE6 /* HeaderView.swift in Sources */,
 				75E2E6152B2F431100F92BE6 /* CategoryCardView.swift in Sources */,
 				75E2E6132B2F410700F92BE6 /* CardBalanceView.swift in Sources */,
+				75E2E61F2B2F8C8800F92BE6 /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75E2E61B2B2F8AF300F92BE6 /* XCRemoteSwiftPackageReference "SwiftNet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WhereIsPumpkin/SwiftNet";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75E2E61C2B2F8AF300F92BE6 /* NetSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75E2E61B2B2F8AF300F92BE6 /* XCRemoteSwiftPackageReference "SwiftNet" */;
+			productName = NetSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75E2E5EC2B2F2FAC00F92BE6 /* Project object */;
 }
