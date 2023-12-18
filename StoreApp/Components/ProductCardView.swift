@@ -17,12 +17,12 @@ struct ProductCardView: View {
             AsyncImage(url: URL(string: product.images[0])) { image in
                 image
                     .resizable()
-                    .frame(height: 150)
+                    .frame(height: 100)
                     .scaledToFit()
             } placeholder: {
                 ProgressView()
             }
-            .frame(height: 200)
+            .frame(height: 100)
             
             Spacer().frame(height: 15)
 

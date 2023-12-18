@@ -8,6 +8,8 @@
 import SwiftUI
 import NetSwift
 
+// MARK: - Enum
+
 enum Category: String, CaseIterable {
     case all = "All"
     case smartphones = "smartphones"
@@ -19,6 +21,9 @@ enum Category: String, CaseIterable {
 }
 
 class MainViewModel: ObservableObject {
+    
+    // MARK: - Properties
+    
     @Published var balance = 5234.50
     @Published var error: String?
     @Published var allProducts: [Product] = []
@@ -28,14 +33,18 @@ class MainViewModel: ObservableObject {
     @Published var isCheckoutSuccessful = false
     @Published var selectedCategory: Category = .all
     
-    init() {
-        fetchDestinations()
-    }
-    
     let gridLayout = [
         GridItem(.flexible(), spacing: 15),
         GridItem(.flexible(), spacing: 15)
     ]
+    
+    // MARK: - Initializers
+    
+    init() {
+        fetchDestinations()
+    }
+    
+    // MARK: - Category Selection
     
     func selectCategory(_ category: Category) {
         selectedCategory = category
@@ -45,6 +54,8 @@ class MainViewModel: ObservableObject {
             products = allProducts.filter { $0.category == category.rawValue }
         }
     }
+    
+    // MARK: - Methods
     
     func addToCart(product: Product) {
         
@@ -91,6 +102,4 @@ class MainViewModel: ObservableObject {
             }
         })
     }
-    
 }
-
